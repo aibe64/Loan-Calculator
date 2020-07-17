@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles/all.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <title>Loan Calculator</title>
+  </head>
+  <body>
+    <div class="container my-4">
+      <div class="row text-center px-4">
+        <!-- HEADER -->
+        <div class="col-12 bg-info text-light py-2">
+          <h3>LOAN APPLICATION</h3>
+        </div>
+        <!-- MAIN SECTION -->
+        <div class="col-12 bg-light">
+          <!-- LOAN FORM SECTION -->
+          <div class="col-12">
+            <div class=" my-3">
+              <h6><b>Note:</b> Interest rate, 2% increases with respect to payment duration.</h6>
+            </div>
+            <form class="loanForm py-3 px-5">
+              <div></div>
+              <div class="form-group ">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><b>Loan Amount</b></span>
+                  </div>
+                  <input type="number" class="loanAmount form-control" min="1000">
+                </div>
+              </div>
+              <div class="form-group ">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><b>Payment Duration</b><i>(months)</i></span>
+                  </div>
+                  <input type="number" class="paymentDuration form-control" max="12" min="1">
+                </div>
+              </div>
+              <div class="form-group ">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><b>Interest Rate</b><i>(% per month)</i></span>
+                  </div>
+                  <input class="interestRate form-control" value="2" readonly>
+                </div>
+              </div>
+              <div class="d-flex justify-content-around">
+                <input class="form-control bg-info text-light w-50 mt-4" type="submit" value="APPLY">
+              </div>
+            </form>
+          </div>
+
+          <!-- REPAYMENT SECTION -->
+          <div class="col-12 loading my-2 py-2">
+            <span class="spinner-border text-info" role="status">
+            </span>
+          </div>
+          <div class="col-12 loanInfo py-4 px-5">
+            <div class="card mx-3">
+              <div class="card-header bg-info text-light">
+                <h6>LOAN APPLICATION INFORMATION</h6>
+              </div>
+              <div class="card-body">
+                <div class="form-group ">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class=" input-group-text">Loan Amount</span>
+                    </div>
+                    <input type="number" class=" loanAmountOutput form-control" readonly>
+                  </div>
+                </div>  
+                <div class="form-group ">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="interest input-group-text">Interest</span>
+                    </div>
+                    <input type="number" class=" loanInterestOutput form-control" readonly>
+                  </div>
+                </div>  
+                <div class="form-group ">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Total Amount at<span class="interestInfo px-1">2%</span> Interest</span>
+                    </div>
+                    <input class=" loanTotalOutput form-control" readonly>
+                  </div>
+                </div>  
+                <div class="form-group ">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Payment Duration</span>
+                    </div>
+                    <input class=" paymentDurationOutput form-control" readonly>
+                  </div>
+                </div>  
+                <div class="form-group ">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Monthly Payment</span>
+                    </div>
+                    <input class=" monthlyPayment form-control" readonly>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FOOTER -->
+        <div class="col-12 bg-info text-light py-3">
+          <b>Powered By Maestro-Tech</b>
+        </div>
+      </div></div>
+    <script src="scripts/jquery-3.4.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
